@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+// page 밖에 적는 것들을 여기에 적음...head 태그에 넣는거, 상단바 등
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
