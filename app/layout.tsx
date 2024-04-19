@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
 // page 밖에 적는 것들을 여기에 적음...head 태그에 넣는거, 상단바 등
+// 왜 layout에 넣기만 하면 다 보이지?
+// page.js 옆에 layout.js 있으면 layout이 page를 감싼다
+// 상위폴더의 layout.js는 더 크게 싸맨다
+// 리액트와의 차이점...? 묘하게 귀찮았던 것들 커버해줌
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="navbar">
+          <Link href="/">home</Link>
+          <Link href="/list">list페이지</Link>
+          {/* Link: a태그랑 똑같지만 부드럽게 페이지 전환(새로고침 안 됨) */}
+        </div>
+        {children}
+        {/* page.js 들어가는 부분 */}
+      </body>
     </html>
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // Next.js는 리액트에 얹혀사는 프레임워크... 리액트 문법으로 만들어야 함
 // return 안에 평행한 태그 여러개 x, 큰 하나의 빈 박스로 감싸야(리액트랑 같음)
@@ -13,10 +14,12 @@ export default function Home() {
   let link = "https://www.youtube.com";
 
   return (
-    <div>
-      <h4 className="text-3xl font-bold text-center mt-[150px]">
+    <main>
+      {/* 상단바 main에 넣으면 다른 페이지에서 안 보이는데? 매번 복붙할겨? */}
+      {/* 공통 요소는 layout.tsx에 */}
+      <h1 className="text-3xl font-bold text-center mt-[150px]">
         Hello, Next.js
-      </h4>
+      </h1>
       {/* 쌩 스타일 태그 금지, 중괄호 두개 치고 style={{}} */}
       {/* 사실 객체 자료형이라 - 못 씀. font-size는 fontSize로 */}
 
@@ -26,7 +29,7 @@ export default function Home() {
           유튜브
         </a>
       </p>
-    </div>
+    </main>
   );
 }
 
