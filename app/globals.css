@@ -35,9 +35,9 @@ body {
   text-decoration: none;
 }
 
-/* .title {
+.title {
   font-size: 40px;
-  margin-top: 150px;
+  margin: 30px 20px;
   font-weight: 700;
   text-align: center;
 }
@@ -46,7 +46,7 @@ body {
   font-size: 24px;
   margin-top: 20px;
   text-align: center;
-} */
+}
 
 .food {
   margin: 20px auto;
@@ -55,6 +55,19 @@ body {
   color: #000;
   padding: 20px;
   border-radius: 5px;
+}
+
+.food-img {
+  width: 100%;
+  height: auto;
+}
+
+.cart-item {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  line-height: 0px;
 }
 
 @layer utilities {
